@@ -11,7 +11,7 @@ knitr::opts_chunk$set(warning = FALSE)
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-A API de dados abertos da camara legislativa possui várias informações dos deputados, como por exemplo: nome, foto, email, votações, entre outros. O pacote camara.leg foi desenvolvido para auxiliar os usuários a acessar a API, baixar os dados e entregar em data frame. Para mais informações de todo o conteúdo que você pode extrair, acesse a [página oficia](https://dadosabertos.camara.leg.br/).
+A API de dados abertos da camara legislativa possui várias informações dos deputados, como por exemplo: nome, foto, email, votações, entre outros. O pacote camara.leg foi desenvolvido para auxiliar os usuários a acessar a API, baixar os dados e entregar em data frame. Para mais informações de todo o conteúdo que você pode extrair, acesse a [página oficial](https://dadosabertos.camara.leg.br/).
 
 ## Instalação
 

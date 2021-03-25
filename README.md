@@ -7,7 +7,7 @@ dos deputados, como por exemplo: nome, foto, email, votações, entre
 outros. O pacote camara.leg foi desenvolvido para auxiliar os usuários a
 acessar a API, baixar os dados e entregar em data frame. Para mais
 informações de todo o conteúdo que você pode extrair, acesse a [página
-oficia](https://dadosabertos.camara.leg.br/).
+oficial](https://dadosabertos.camara.leg.br/).
 
 ## Instalação
 
@@ -62,18 +62,15 @@ library(dplyr)
 deputados <- deputados()
 
 deputados %>% 
-  as_tibble() %>% 
   filter(siglaUf == "PE") %>% 
   select(nome, siglaPartido, email) %>% 
   head()
 ```
 
-    ## # A tibble: 6 x 3
-    ##   nome             siglaPartido  email                            
-    ##   <chr>            <chr>         <chr>                            
-    ## 1 André de Paula   PSD           dep.andredepaula@camara.leg.br   
-    ## 2 André Ferreira   PSC           dep.andreferreira@camara.leg.br  
+    ##               nome  siglaPartido                             email
+    ## 1   André de Paula           PSD    dep.andredepaula@camara.leg.br
+    ## 2   André Ferreira           PSC   dep.andreferreira@camara.leg.br
     ## 3 Augusto Coutinho SOLIDARIEDADE dep.augustocoutinho@camara.leg.br
-    ## 4 Carlos Veras     PT            dep.carlosveras@camara.leg.br    
-    ## 5 Daniel Coelho    CIDADANIA     dep.danielcoelho@camara.leg.br   
-    ## 6 Danilo Cabral    PSB           dep.danilocabral@camara.leg.br
+    ## 4     Carlos Veras            PT     dep.carlosveras@camara.leg.br
+    ## 5    Daniel Coelho     CIDADANIA    dep.danielcoelho@camara.leg.br
+    ## 6    Danilo Cabral           PSB    dep.danilocabral@camara.leg.br
