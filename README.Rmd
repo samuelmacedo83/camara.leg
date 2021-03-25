@@ -1,0 +1,73 @@
+---
+title: "camara.leg: Ferramenta para Extrair Dados da API de Dados Abertos da Câmara Legislativa"
+output:
+  github_document:
+    fig_width: 9
+    fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+A API de dados abertos da camara legislativa possui várias informações dos deputados, como por exemplo: nome, foto, email, votações, entre outros. O pacote camara.leg foi desenvolvido para auxiliar os usuários a acessar a API, baixar os dados e entregar em data frame. Para mais informações de todo o conteúdo que você pode extrair, acesse a [página oficia](https://dadosabertos.camara.leg.br/).
+
+## Instalação
+
+Para acessar e instalar a versão mais atual do camara.leg, use os comandos abaixo e reinicie sua sessão R: 
+
+```{r, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("samuelmacedo83/camara.leg")
+```
+
+Carregue o pacote
+
+```{r, eval=TRUE}
+library(camara.leg)
+```
+
+## Baixando as informações da API
+
+A API de dados abertos permite acessar as seguintes informações:
+
+ - blocos
+ - deputados
+ - eventos
+ - frentes
+ - legislaturas
+ - partidos
+ - proposições
+ - referências
+ - votações
+ - orgãos
+ 
+Para acessar esses dados usando o pacote camara.leg basta chamar uma função com o nome a da informação desejada (sem acentos). Veja os exemplos a seguir.
+ 
+```{r }
+deputados()
+orgaos()
+votacoes()
+```
+
+## Exemplo de uso usando dplyr
+
+Como o camara.leg já converte os dados da API para data frame é possível fazer manipulações na base usando o dplyr. 
+
+```{r eval=TRUE, message=FALSE}
+# use install.packages("dplyr") caso ainda não tenha instalado
+library(dplyr)
+
+deputados <- deputados()
+
+deputados %>% 
+  filter(siglaUf == "PE") %>% 
+  select(nome, siglaPartido, email) %>% 
+  head()
+```
+
+
+
+
+

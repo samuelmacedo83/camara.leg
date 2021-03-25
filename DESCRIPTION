@@ -1,0 +1,23 @@
+Package: camara.leg
+Type: Package
+Title:  Ferramenta para Extrair Dados da API de Dados Abertos da Câmara Legislativa 
+Version: 0.0.1
+Author: Samuel Macêdo
+Maintainer: Samuel Macêdo <svm.macedo@gmail.com>
+Description: A API de dados abertos da camara legislativa possui várias 
+    informações dos deputados, como por exemplo: nome, foto, email, votações, 
+    entre outros. O pacote camara.leg foi desenvolvido para auxiliar os usuários
+    a acessar a API, baixar os dados e entregar em data frame. Para mais 
+    informações de todo o conteúdo que você pode extrair, acesse a 
+    página oficia em <https://dadosabertos.camara.leg.br/>.
+URL: https://github.com/samuelmacedo83/camara.leg
+BugReports: https://github.com/samuelmacedo83/camara.leg/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.6)
+Imports: 
+    jsonlite
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
